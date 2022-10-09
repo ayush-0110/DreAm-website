@@ -1,0 +1,35 @@
+.songInfo{
+    
+    left: 6.5vw;
+}
+
+#vol{
+    right: 6.5vw;
+}
+
+.songItem{
+    width: 100%;
+}
+.container1 {
+    width: 95%;
+}
+#time{
+    font-size: 24px;
+}
+#masterSongName{
+    font-size: 14px;
+}
+#gif{
+    height: 13px;
+}
+#mainHead{
+    font-size: 30px;
+}
+
+.songItemsContainer {
+    margin-top: 18px;
+}
+
+#nav ul{
+    height: 60px;
+}

@@ -1,0 +1,46 @@
+.rightslide{
+    display: none;
+}
+.container1{
+    width: 90%;
+}
+
+.songItem{
+    width: 80%;
+}#myVolumeBar{
+    width: 7vw;
+}
+.bottom{
+    height: 115px;
+    position: fixed;
+    width: 100vw;
+    height: 115px;
+}
+
+.songInfo{
+    display: flex;
+    align-items: center;
+    /* left: 7.5vw; */
+}
+
+
+.songInfo span{
+    margin-left: 4px;
+    white-space: nowrap;
+    width: 85px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.songName{
+    white-space: nowrap;
+    width: 96px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+#time{
+    font-size: 28px;
+}

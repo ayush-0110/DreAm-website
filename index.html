@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DREAM:-just music, no ads</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" media="screen and (max-width: 1150px)" href="/phone.css">
+    <link rel="stylesheet" media="screen and (max-width: 700px)" href="/phone1.css">
+    <link rel="stylesheet" media="screen and (max-width: 600px)" href="/phone2.css">
+    <link rel="stylesheet" media="screen and (max-width: 490px)" href="/phone3.css">
+    <link rel="stylesheet" media="screen and (max-width: 388px)" href="/phone4.css">
+
+</head>
+<body>
+    <div id="overlay">
+        
+            <!-- <div class="alert alert-danger" id="msg-dan">Invalid credentials</div> -->
+        
+        <div class="card" >
+            <img style="opacity:0.8 ;" src="https://source.unsplash.com/1600x900/?nature" class="card-img-top" alt="...">
+            <!-- <div class="card-body" style="background-color:#bcc0eb ;"> -->
+            <div class="card-body">
+                <div class="welcome" id="welcome">
+
+                    <h3 class="card-title">Welcome!!!</h3>
+                    <p class="card-text" id="quote">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <p id="author"></p>
+                    <div class="btnlog">
+                        
+                        <button class="btn btn-primary" id="login">LogIn</button>
+                        <button class="btn btn-primary" id="signup">SignUp</button>
+                    </div>
+                </div>
+                <div class="otpver" id="otpver">
+                    
+                        <div class="alert alert-danger" id="invotp">Invalid OTP</div>
+                        <input type="email" id="email" name="email" placeholder="Enter your Email for OTP" required>
+                        <input type="text" name="otp" placeholder="Enter the 4-digit OTP(check spam mails also for OTP)" id="otp" required>
+                        <div class="otpbut">
+                            <a class="btn btn-primary btnlog" id="otpsend">Send OTP</a>
+                            <a class="btn btn-primary btnlog" id="bt33">Next</a>
+                        </div>
+                    
+
+                </div>
+                <div class="sign" id="sign">
+                    <h3>Sign Up</h3>
+                    <form action="/signupform" method="post" class="myform" id="signupform" >
+                        <input type="Number" id="name" name="name" placeholder="Enter your 10 digit Mobile Number" required >
+                        <input type="password" name="password" placeholder="Enter the Password of your choice." id="passwordn" required>
+                        <div class="sign-register"> 
+                            <button class="btn btn-primary btnlog" id="bt3" type="submit">Login</button>
+                        </div>
+                    </form>
+                    <!-- <a class="btn btn-primary" id="btn1">Go to Dream</a> -->
+                </div>
+                <div class="sign" id="log">
+                    <h3>Log In</h3>
+                    <form action="/loginform" method="post" class="myform" id="loginform" >
+                        <!-- <input type="text" id="name" name="name" placeholder="Enter your Name"> -->
+                        <input type="Number" id="name1" name="name" placeholder="Enter your 10 digit phone number">
+                        <input type="password" name="password" placeholder="Enter Password" id="password">
+                        <div class="sign-register"><button class="btn btn-primary btnlog" id="bt4" type="submit">SignIn</button> 
+                            <a id="forgotbtn" class="btn btn-primary btnlog">Forgot Password</a>
+                        </div>
+                    </form>
+                    <!-- <a class="btn btn-primary" id="btn1">Go to Dream</a> -->
+                </div>
+                <div class="forgotverif" id="forgotverif">
+                    <div class="alert alert-danger" id="invotp_forgot">Invalid OTP</div>
+                    <input type="email" id="emailf" name="email" placeholder="Enter your Email for OTP" required>
+                    <input type="text" name="otpforgot" placeholder="Enter the 4-digit OTP(check spam mails also for OTP)" id="otpforgot" required>
+                    <div>
+                        <a class="btn btn-primary btnlog" id="otpsend1">Send OTP</a>
+                        <a id="bt55" class="btn btn-primary btnlog">Next</a>
+                    </div>
+                </div>
+                <div class="sign" id="forgo">
+                    <h3>Forgot Password</h3>
+                    <form action="/forgot" method="post" id="forgotform" >
+                        
+                        <!-- <input type="email" id="emailf" name="email" placeholder="Enter your Email for OTP"> -->
+                        <input type="Number" id="name11" name="name" placeholder="Enter your 10 digit phone number">
+                        <input type="password" name="password" placeholder="Enter the Password of your choice." id="newpassword">
+                        <!-- <input type="text" name="otpforgot" placeholder="Enter OTP(check spam mails also for OTP)" id="otpforgot"> -->
+                        <div class="sign-register">
+                            <!-- <a class="btn btn-primary btnlog" id="otpsend1">Send OTP</a>  -->
+                            <button id="bt5" class="btn btn-primary btnlog" type="submit">Login</button>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+    </div>
+    <nav>
+        <ul>
+            <li class="logo"><img src="logo1.png" alt="DREAM">DreAm</li>
+            <li class="hvr"><a href="/">Home</a> </li>
+            <li class="hvr">About</li>
+            <!-- <li class="hvr"><a href="/">Contact Us</a> </li> -->
+            <li class="time" id="time">10:15</li>
+        </ul>
+    </nav>
+<div class="rightslide">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"  data-bs-toggle="tooltip" data-bs-placement="left"
+            data-bs-custom-class="custom-tooltip"
+    data-bs-title="Weather" id="rightslidearrow" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+        <path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+      </svg>
+      <div class="card" id="weather">
+        <!-- style="width: 18rem;" -->
+        <!-- <img src="..." class="card-img-top" alt="WEATHER">
+        <div class="card-body">
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div> -->
+
+    
+    <img src="" alt="weath" id="weather-icon">
+    
+
+        <div class="wdata">
+            <div id="location">Unable to Fetch Weather</div>
+            <div class="desc">No Information Available.</div>
+            <div class="weather">
+                <div class="c">Error</div>
+                <div class="circle"></div>
+                <div class="f">Error</div>
+            </div>
+        </div>
+        </div>
+</div>
+
+    <div class="container1">
+        <h1 id="mainHead">STAY</h1>
+        <div class="songList">
+
+            <div class="songItemsContainer">
+                <div class="songItem">
+                    <img src="covers/1.jpg" alt="cover" id="img1">
+                    <span class="songName">Stay</span>
+                    <span class="songlistPlay"> <span class="timeStamp"><img src="playing1.gif" alt="music" width="43px" id="gif1" class="gif1">  <i id="0" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/1.jpg" alt="cover" id="img1">
+                    <span class="songName">Stay</span>
+                    <span class="songlistPlay"> <span class="timeStamp"><img src="playing1.gif" alt="music" width="43px" class="gif1"> <i id="1" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/1.jpg" alt="cover" id="img1">
+                    <span class="songName">Stay</span>
+                    <span class="songlistPlay"> <span class="timeStamp"><img src="playing1.gif" alt="music" width="43px" class="gif1"> <i id="2" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/1.jpg" alt="cover" id="img1">
+                    <span class="songName">Stay</span>
+                    <span class="songlistPlay"> <span class="timeStamp"><img src="playing1.gif" alt="music" width="43px" class="gif1"> <i id="3" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/1.jpg" alt="cover" id="img1">
+                    <span class="songName">Stay</span>
+                    <span class="songlistPlay"> <span class="timeStamp"><img src="playing1.gif" alt="music" width="43px" class="gif1"> <i id="4" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                <div class="songItem">
+                    <img src="covers/1.jpg" alt="cover" id="img1">
+                    <span class="songName">Stay</span>
+                    <span class="songlistPlay"> <span class="timeStamp"><img src="playing1.gif" alt="music" width="43px" class="gif1"> <i id="5" class="fa-regular songItemPlay fa-circle-play"></i></span></span>
+                </div>
+                
+                
+            </div>
+        </div>
+            <!-- <div class="songBanner"></div> -->
+        </div>
+
+
+    <div class="bottom">
+        <div id="progress">
+            <span id="curdur" class="songdur">00:00</span>
+            <input type="range" name="range" id="myProgressBar" min="0" max="100" value="0">
+            <span id="totdur" class="songdur">00:00</span>
+        </div>
+        
+       
+         
+        <div class="icons">
+            <!-- <div class="speed">
+                <select name="playspeed" id="playbackspeed">
+                    <option value="1x">1x</option>
+                    <option value="1.5x">1.5x</option>
+                    <option value="2x">2x</option>
+                </select>
+            </div> -->
+            <div class="dropdown" style="display: inline;">
+                <button class="btn btn-dark btn-secondary btn-sm dropdown-toggle" id="speed" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Speed
+                </button>
+                <ul class="dropdown-menu speed">
+                  <li><a class="dropdown-item" id="0.5">0.5x</a></li>
+                  <li><a class="dropdown-item" id="1">1x</a></li>
+                  <li><a class="dropdown-item" id="1.5">1.5x</a></li>
+                  <li><a class="dropdown-item" id="2">2x</a></li>
+                </ul>
+              </div>
+            <svg xmlns="http://www.w3.org/2000/svg" data-bs-toggle="tooltip" data-bs-placement="top"
+            data-bs-custom-class="custom-tooltip"
+            data-bs-title="Previous Song" viewBox="0 0 512 512" id="prev" ><path d="M459.5 71.41l-171.5 142.9v83.45l171.5 142.9C480.1 457.7 512 443.3 512 415.1V96.03C512 68.66 480.1 54.28 459.5 71.41zM203.5 71.41L11.44 231.4c-15.25 12.87-15.25 36.37 0 49.24l192 159.1c20.63 17.12 52.51 2.749 52.51-24.62v-319.9C255.1 68.66 224.1 54.28 203.5 71.41z"/></svg>
+            <div id="masterPlay">
+
+                <svg xmlns="http://www.w3.org/2000/svg" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="Play" viewBox="0 0 384 512" class="play" id="play"><path d="M361 215C375.3 223.8 384 239.3 384 256C384 272.7 375.3 288.2 361 296.1L73.03 472.1C58.21 482 39.66 482.4 24.52 473.9C9.377 465.4 0 449.4 0 432V80C0 62.64 9.377 46.63 24.52 38.13C39.66 29.64 58.21 29.99 73.03 39.04L361 215z"/>
+                </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="Pause" viewBox="0 0 384 512" class="pause" id="pause"><path d="M384 128v255.1c0 35.35-28.65 64-64 64H64c-35.35 0-64-28.65-64-64V128c0-35.35 28.65-64 64-64H320C355.3 64 384 92.65 384 128z"/></svg>
+            </div>
+                <svg xmlns="http://www.w3.org/2000/svg" data-bs-toggle="tooltip" data-bs-placement="top"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-title="Next Song" viewBox="0 0 512 512" id="next"><path d="M52.51 440.6l171.5-142.9V214.3L52.51 71.41C31.88 54.28 0 68.66 0 96.03v319.9C0 443.3 31.88 457.7 52.51 440.6zM308.5 440.6l192-159.1c15.25-12.87 15.25-36.37 0-49.24l-192-159.1c-20.63-17.12-52.51-2.749-52.51 24.62v319.9C256 443.3 287.9 457.7 308.5 440.6z"/></svg>
+                <!-- <i class="fa-solid fa-arrow-rotate-right" id="loop"></i> -->
+                <div id="loop">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-custom-class="custom-tooltip"
+                    data-bs-title="Enable loop." class="bi bi-repeat" id="loop1" viewBox="0 0 16 16">
+                        <path d="M11 5.466V4H5a4 4 0 0 0-3.584 5.777.5.5 0 1 1-.896.446A5 5 0 0 1 5 3h6V1.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384l-2.36 1.966a.25.25 0 0 1-.41-.192Zm3.81.086a.5.5 0 0 1 .67.225A5 5 0 0 1 11 13H5v1.466a.25.25 0 0 1-.41.192l-2.36-1.966a.25.25 0 0 1 0-.384l2.36-1.966a.25.25 0 0 1 .41.192V12h6a4 4 0 0 0 3.585-5.777.5.5 0 0 1 .225-.67Z"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Disable Loop" class="bi bi-repeat-1" id="loop2" viewBox="0 0 16 16">
+                        <path d="M11 4v1.466a.25.25 0 0 0 .41.192l2.36-1.966a.25.25 0 0 0 0-.384l-2.36-1.966a.25.25 0 0 0-.41.192V3H5a5 5 0 0 0-4.48 7.223.5.5 0 0 0 .896-.446A4 4 0 0 1 5 4h6Zm4.48 1.777a.5.5 0 0 0-.896.446A4 4 0 0 1 11 12H5.001v-1.466a.25.25 0 0 0-.41-.192l-2.36 1.966a.25.25 0 0 0 0 .384l2.36 1.966a.25.25 0 0 0 .41-.192V13h6a5 5 0 0 0 4.48-7.223Z"/>
+                        <path d="M9 5.5a.5.5 0 0 0-.854-.354l-1.75 1.75a.5.5 0 1 0 .708.708L8 6.707V10.5a.5.5 0 0 0 1 0v-5Z"/>
+                      </svg>
+                </div>
+                </div>
+        <div class="songInfo">
+            <img src="playing.gif" alt="music" width="50px" id="gif"> 
+            <span id="masterSongName"> STAY</span>
+        </div>
+        <div id="vol">
+
+            <i class="fa fa-volume-down" id="voldown"></i>
+            <input type="range" name="range" id="myVolumeBar" min="0" max="100" value="50">
+            <i class="fa fa-volume-up" id="volup"></i>
+        </div>
+    </div>
+
+    <!-- <div class="lyrics" id="result">
+        Lyrics
+    </div> -->
+    <script src="https://kit.fontawesome.com/b33abf139d.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <!-- <script src="app.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script>const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))</script>
+        <script src="https://smtpjs.com/v3/smtp.js">
+</script>
+      
+</body>
+</html>

@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: rgb(245, 231, 231);
+}
+#time{
+    position: absolute;
+    right: 0;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+
+}
+nav{
+    font-family: 'Ubuntu', sans-serif;
+}
+nav ul{
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    background-color: black;
+    color: white;
+    height: 66px;
+}
+.hvr:hover{
+    cursor: pointer;
+    border: 2px solid white;
+    background-color: rgb(127, 19, 229);
+    border-radius: 15px;
+    /* font-weight: bold; */
+}
+nav ul li{
+    /* text-decoration: none; */
+    padding: 0 13px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    /* padding: 0 13px; */
+}
+nav ul li a:hover{
+    color: white;
+}
+.logo img{
+    width: 42px;
+    border: 2px solid white;
+    border-radius: 24px;
+    margin: 0 8px;
+}
+.logo{
+    /* font-family: 'Caveat', cursive; */
+    display: flex;
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+}
+
+#rightslidearrow{
+    position: fixed;
+    top: 42vh;
+    /* width: 25px; */
+    right: 0;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#weather{
+    position: fixed;
+    top: 23.5vh;
+    height: 295px;
+    width: 0;
+    z-index: 1;
+    right: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+    background-color: #090909c9;
+    color: white;
+}
+#weather-icon{
+height: 62%;
+background-color: #201f1f;
+}
+.wdata{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.showweather{
+width: 250px;
+}
+.container1{
+    min-height: 60vh;
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 67%;
+    border: 2px solid white;
+    border-radius: 14px;
+    padding: 35px;
+    background: center/cover no-repeat url("bg1.jpg") ;
+}
+.bottom{
+    /* position: sticky; */
+    position: fixed;
+    width: 100vw;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.songInfo{
+    position: absolute;
+    left: 9.5vw;
+}
+.songInfo span{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: 600;
+} 
+.songInfo img{
+    
+    opacity: 0;
+    transition: 0.4s ease-in;
+    
+}
+.icons{
+    margin-top: 15px;
+    
+}
+
+.songItem{
+height: 55px;
+background-color: white;
+color: black;
+display: flex;
+flex-direction: row;
+width: 50%;
+margin: 12px 0;
+align-items: center;
+justify-content: space-between;
+border-radius: 34px;
+font-weight: bold;
+}
+
+/* .songItem img{
+width: 43px;
+margin: 0 23px;
+border-radius: 50px;
+} */
+#img1{
+width: 43px;
+margin: 0 23px;
+border-radius: 50px;
+}
+
+.songItem i{
+    
+    cursor: pointer;
+   
+    /* padding-right: 25px;
+    margin-left: -20px; */
+}
+
+
+.songItemsContainer{
+    margin-top: 30px
+}
+
+#mainHead{
+    margin-left: 18px;
+}
+
+.timeStamp{
+    margin: 0 23px;
+    /* position: relative;
+    bottom: 2px; */
+}
+.icons svg{
+    filter: invert(1);
+    height: 25px;
+    padding: 0 5px;
+    cursor: pointer;
+    
+}
+
+#loop1{
+    height: 25px;
+    width: 35px;
+    padding: 0 5px;
+    cursor: pointer;
+    filter: invert(0);
+}
+#loop2{
+    height: 25px;
+    width: 35px;
+    padding: 0 5px;
+    cursor: pointer;
+    filter: invert(0);
+    display: none;
+}
+#overlay {
+    position: fixed;
+    /* display: none; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* transition: all ease-in-out 1400ms; */
+    /* cursor: pointer; */
+}
+.card{
+    /* position: relative; */
+    height: 92vh;
+    width: 80%;
+/* margin: auto 0; */
+}
+
+.card-body{
+    /* background-color:#bcc0eb; */
+    /* background-color:#4e4352de; */
+    background-color:#484549de;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* position: absolute; */
+    /* for centereing the div of form in image part:  */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* margin: auto; */
+    color: white;
+
+}
+
+.welcome{
+    text-align: center;
+}
+.sign{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.card-body p{
+    
+    color: white;
+}
+.card-body h3{
+
+    color: white;
+}
+/* .sign-register{
+} */
+.btnlog{
+    margin: 8px;
+
+}
+#loop{
+    display: inline-block;
+    /* background-color: red; */
+
+}
+#pause{
+    display: none;
+}
+#masterPlay{
+    display: inline-block;
+}
+#myProgressBar{
+    width: 74.5vw;
+    cursor: pointer;
+}
+
+.gif1{
+    opacity: 0;
+    transition: 0.4s ease-in;
+}
+.speed{
+    display: inline;
+    position: relative;
+    bottom: 7px;
+    padding-right: 7px;
+}
+form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+form input{
+   width: 70%;
+    background-color: #ddd;
+    outline: none;
+    border: none;
+    margin-bottom: 6px;
+    padding: 8px 10px;
+
+}
+
+.disablebtn{
+    pointer-events: none;
+}
+.enablebtn{
+    pointer-events: auto;
+}
+
+#vol{
+    position: absolute;
+    right: 9.5vw;
+    display: flex;
+    align-items: center;
+}
+#voldown{
+    margin-right: 6px;
+    cursor: pointer;
+}
+#volup{
+    margin-left: 6px;
+    cursor: pointer;
+}
+
+
+#myVolumeBar{
+    -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 5px;
+  background: white;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+
+/* for customising volume bar */
+#myVolumeBar::-webkit-slider-thumb{
+
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#myVolumeBar:hover {
+  opacity: 1.0;
+}
+
+.songName{
+    white-space: nowrap;
+    width: 115px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.otpver{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.forgotverif{
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+#invotp{
+    display: none;
+}
+.otpver input{
+    width: 70%;
+     background-color: #ddd;
+     outline: none;
+     border: none;
+     margin-bottom: 6px;
+     padding: 8px 10px;
+ 
+ }
+.forgotverif input{
+    width: 70%;
+     background-color: #ddd;
+     outline: none;
+     border: none;
+     margin-bottom: 6px;
+     padding: 8px 10px;
+ 
+ }
+ .forgotverif{
+    display: none;
+ }
+ #invotp_forgot{
+    display: none;
+ }

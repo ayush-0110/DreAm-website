@@ -1,0 +1,16 @@
+.songItem {
+    
+    margin: 20px 0;
+    
+    font-size: 15px;
+}
+
+
+.gif1{
+    display: none;
+}
+
+nav ul li{
+    position: relative;
+    right: 30px;
+}
